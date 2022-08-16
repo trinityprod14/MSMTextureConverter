@@ -22,7 +22,7 @@ def unpack_dds(file_name):
 
     offset = '0x80' if has_header(raw) else '0x00'
 
-    subprocess.Popen([RAWTEX, output_path, 'BC7', offset]).wait()
+    subprocess.Popen([RAWTEX, output_path, 'BC1', offset]).wait()
     os.remove(output_path)
     print('Unpacked:', str(input_path))
 
